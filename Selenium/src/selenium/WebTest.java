@@ -23,7 +23,7 @@ public class WebTest {
 		return driver;
 	}
 	
-	public static void register(WebDriver driver) throws InterruptedException {
+	public static void register(WebDriver driver){
 		 driver.findElement(By.xpath("/html[1]/body[1]/nav[1]/div[1]/div[2]/ul[1]/li[2]/a[1]")).click();
 		 driver.findElement(By.linkText("Register")).click();
 		//fill the account info
@@ -36,7 +36,7 @@ public class WebTest {
 		
 		//check the check box to agree with Privacy Policy
 		driver.findElement(By.name("agree")).click();
-		Thread.sleep(4000);
+		driver.manage().timeouts().implicitlyWait(4, TimeUnit.SECONDS);
 		
 		driver.findElement(By.xpath("/html[1]/body[1]/div[2]/div[1]/div[1]/form[1]/div[1]/div[1]/input[2]")).click();
 		System.out.println("Register done!");
@@ -56,10 +56,10 @@ public class WebTest {
 		System.out.println("Login done!");
 	}
 	
-	public static void main(String[] args) throws InterruptedException {
+	public static void main(String[] args) {
 		WebDriver driver = setUpDriver();
 		driver.get("http://tutorialsninja.com/demo/");
-		Thread.sleep(4000);
+		driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
 
 		login(driver);
 		 
