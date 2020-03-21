@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [PositiveTestSuite]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="PositiveTest(failed)">
+<suite thread-count="1" parallel="tests" name="Failed suite [NegativeTestSuite]" guice-stage="DEVELOPMENT">
+  <test thread-count="1" parallel="tests" name="NegativeLoginTest(failed)">
     <classes>
-      <class name="com.herokuapp.theinternet.PositiveTests">
+      <class name="com.herokuapp.theinternet.NegativeLoginTests">
         <methods>
+          <include name="loginTest"/>
           <include name="setUp"/>
-          <include name="logInTest"/>
         </methods>
-      </class> <!-- com.herokuapp.theinternet.PositiveTests -->
+      </class> <!-- com.herokuapp.theinternet.NegativeLoginTests -->
     </classes>
-  </test> <!-- PositiveTest(failed) -->
-</suite> <!-- Failed suite [PositiveTestSuite] -->
+  </test> <!-- NegativeLoginTest(failed) -->
+</suite> <!-- Failed suite [NegativeTestSuite] -->

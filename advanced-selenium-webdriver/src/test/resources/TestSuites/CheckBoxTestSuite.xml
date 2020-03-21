@@ -1,0 +1,11 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="CheckboxTestSuite" verbose="1">
+	
+	<test name="CheckboxTests">
+		<classes>
+			<class name="com.herokuapp.theinternet.checkboxtests.CheckboxTests" />
+		</classes>
+	</test>
+	
+</suite>
